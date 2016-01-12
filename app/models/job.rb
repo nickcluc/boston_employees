@@ -1,6 +1,6 @@
 class Job < ActiveRecord::Base
   before_create :downcase_name
-  
+
   include SalaryCalculations
 
   has_many :employees
@@ -10,7 +10,6 @@ class Job < ActiveRecord::Base
   private
 
   def downcase_name
-    name = self.name
-    self.name = name.downcase
+    self.name.downcase!
   end
 end
