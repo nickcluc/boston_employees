@@ -12,12 +12,14 @@ gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rename'
 gem 'httparty'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry-rails'
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
 end
 
 group :development do
