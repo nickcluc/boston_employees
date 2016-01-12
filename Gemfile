@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rename'
 gem 'httparty'
 gem 'active_model_serializers'
+gem 'coveralls', require: false
 
 group :development, :test do
   gem 'pry-rails'
