@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160112070410) do
+ActiveRecord::Schema.define(version: 20160112155105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,9 +40,17 @@ ActiveRecord::Schema.define(version: 20160112070410) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.string   "name",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "name",                          null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "average_regular",   default: 0
+    t.integer  "average_retro",     default: 0
+    t.integer  "average_other_pay", default: 0
+    t.integer  "average_overtime",  default: 0
+    t.integer  "average_injured",   default: 0
+    t.integer  "average_detail",    default: 0
+    t.integer  "average_quinn",     default: 0
+    t.integer  "average_total",     default: 0
   end
 
 end
