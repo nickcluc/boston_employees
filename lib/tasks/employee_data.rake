@@ -14,8 +14,8 @@ namespace :employee_data do
       e.detail = (person["detail"].to_f * 100).to_i
       e.quinn = (person["quinn"].to_f * 100).to_i
       e.total = (person["total_earnings"].to_f * 100).to_i
-      j = Job.find_or_create_by(name: person["title"])
-      d = Department.find_or_create_by(name: person["department_name"])
+      j = Job.find_or_create_by(name: person["title"].downcase)
+      d = Department.find_or_create_by(name: person["department_name"].downcase)
       e.job = j
       e.department = d
       e.save
