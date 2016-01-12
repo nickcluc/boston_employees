@@ -1,5 +1,6 @@
 class Employee < ActiveRecord::Base
   belongs_to :job
+  belongs_to :department
 
   validates :name, :zipcode, presence: true
   validates :job_id,
