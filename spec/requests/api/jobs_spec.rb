@@ -16,6 +16,15 @@ describe "Jobs API" do
       expect(response).to be_success
       expect(json['jobs'].length).to eq(10)
     end
+
+    it 'sends a an error when no job found' do
+      job_name = "Testjob"
+      error_name = "sfjkfdfsdf"
+      FactoryGirl.create(:job, name: job_name)
+      get "/api/jobs?job_name=" + error_name
+      json = JSON.parse(response.body)
+      expect(json['error']).to eq("Job #{error_name} not found!")
+    end
   end
 
   context "test salary calculations" do
