@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: boston_employees_development
+
+test:
+  <<: *default
+  database: boston_employees_test
+
+production:
+  <<: *default
+  database: boston_employees_production
+  username: boston_employees
+  password: <%= ENV['BOSTON_EMPLOYEES_DATABASE_PASSWORD'] %>
