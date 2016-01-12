@@ -3,14 +3,14 @@ class Employee < ActiveRecord::Base
   belongs_to :department
 
   validates :name, :zipcode, presence: true
-  validates :job_id,
-    :department_id,
-    :regular,
-    :retro,
-    :other_pay,
-    :overtime,
-    :injured,
+  validates :department_id,
     :detail,
+    :injured,
+    :job_id,
+    :other_pay,
+    :regular,
+    :overtime,
     :quinn,
+    :retro,
     :total, presence: true, numericality: { only_integer: true }
 end

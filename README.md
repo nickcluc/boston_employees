@@ -34,6 +34,25 @@ This employee data is then serialized to include the appropriate values (average
 # API
 There is only one call, a ```GET``` to the jobs resource. This resource accepts a ```job_name``` param. If there is no ```job_name``` param, the first 10 jobs in the database are returned. If the no job is found from the ```job_name``` param, the JSON returns an error message.
 
+# Design Decisions
+The first design decision was to break out the Job records and department records into separate models. That way through ActiveRecord relations, relational data could be retireved quickly and easily.
+
+Secondly, was to design the API to accept a parameter of job_name. This was the key to pull the correct data and calculate the correct data.
+
+As stated above, the largest design decision, in my opinion, was to parse the existing JSON into objects in the database. There are a few reasons why:
+  - Minimize external API calls
+  - Ensure that the functionality of the application does not rely on the external API once the initial seeding takes place
+  - When the records are associated correctly, relational data is retrieved much faster and in a way that is native to ActiveRecord instead of parsing through a document to find a specific record
+
+
 # TODO
 1. Implement a departments controller to pull average salaries by departments
 2. Implement a cities model & controller to display average salaries by city
+
+### Other information
+- Code Samples:
+  - Ongoing Rails + AngularJS project (https://github.com/nickcluc/rails_angular_pickem)
+  - Golf / Social Networking Application (https://github.com/nickcluc/golf)
+  - Sample Dashboard (https://github.com/nickcluc/EduMetricsDashboard)
+- LinkedIn:
+  - https://www.linkedin.com/in/nickclucas

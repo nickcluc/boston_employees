@@ -1,10 +1,11 @@
 class Job < ActiveRecord::Base
+  before_create :downcase_name
+  
   include SalaryCalculations
 
   has_many :employees
 
   validates :name, presence: true
-  before_create :downcase_name
 
   private
 
