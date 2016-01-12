@@ -1,4 +1,5 @@
 # Boston City Employee Salary Data API
+[ ![Codeship Status for nickcluc/boston_employees](https://codeship.com/projects/976a9d60-9b71-0133-e4b8-7a41677d4861/status?branch=master)](https://codeship.com/projects/126788)
 
 This application parses through an available resource on the web [https://data.cityofboston.gov/Finance/Employee-Earnings-Report-2014/4swk-wcg8] and given a job title,
 will return specific information including **average salary**, **maximum salary**, **minimum salary**, and a **list of employees** with that job title.
