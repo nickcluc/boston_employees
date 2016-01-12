@@ -11,7 +11,7 @@ will return specific information including **average salary**, **maximum salary*
 - Run ```rake employee_data:import```
 - Run ```rails server```
 - Navigate your browser to ```locahost:3000```
-- If you want a specific job title, navigate to ```locahost:3000?job_name=admin assist```
+- If you want a specific job title, navigate to ```locahost:3000?job_name=admin asst```
 
 ## OR If You Want To Skip Right To The Good Stuff
 [https://glacial-forest-2757.herokuapp.com/?job_name=admin%20asst]
