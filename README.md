@@ -33,3 +33,7 @@ This employee data is then serialized to include the appropriate values (average
 
 # API
 There is only one call, a ```GET``` to the jobs resource. This resource accepts a ```job_name``` param. If there is no ```job_name``` param, the first 10 jobs in the database are returned. If the no job is found from the ```job_name``` param, the JSON returns an error message.
+
+# TODO
+1. Implement a departments controller to pull average salaries by departments
+2. Implement a cities model & controller to display average salaries by city
