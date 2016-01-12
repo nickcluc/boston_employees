@@ -24,7 +24,7 @@ will return specific information including **average salary**, **maximum salary*
 - Prin Clerk
 
 ## Models
-![alt text](/employees_er_diagram.png "ER Diagram")
+![alt text](./employees_er_diagram.png "ER Diagram")
 
 ## How It Works
 A rake task was created to parse through a JSON version of the Boston Employees Earnings Report. This task an be set up via a cron job to run periodically and repopulate, update and create new records as they are added to the report. This method (parse and store on a local DB) was chosen so that in case the resource was ever taken offline, the API could still function with the data in the DB.
