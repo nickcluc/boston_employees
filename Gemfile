@@ -22,3 +22,7 @@ end
 group :development do
   gem 'better_errors'
 end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.0'
+end
